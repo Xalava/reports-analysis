@@ -1,7 +1,11 @@
 // Usage
 // 1. Open the browser at the right URL (change year)
+// Example of relevant pages
+// - article 4 https://www.imf.org/en/Publications/Search#sort=relevancy&numberOfResults=50&f:series=[ARTICLE4]&DateTo=12%2F31%2F2024&DateFrom=1%2F1%2F2024
+// - TA Reports https://www.imf.org/en/Publications/Search#sort=relevancy&numberOfResults=50&f:series=[COUNTRYREPS,TECHASSTREPS]&DateTo=12%2F31%2F2024&DateFrom=1%2F1%2F2024
 // 2. Open the console and paste the code below, then arrow up and enter
-// 3. Move from downloads to the right folder. 
+// 3. Move from downloads to the right folder. Eg.
+// 	 mv ~/Downloads/*.pdf TA/2021/
 
 
 // Get all the elements with the specified class

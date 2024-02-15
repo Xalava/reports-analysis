@@ -123,10 +123,15 @@ def dict_to_csv(dictionary, filename):
 
 if __name__ == "__main__":
 	# Intialize variables
+
 	countries = load_countries("countries.md")
 
 	# To match "digitalizing", "digitalization", or "digitalize"
-	keyword = re.compile("digitaliz(e|ing|ation)"+r'\b', re.IGNORECASE)
+#	keyword = re.compile("digitaliz(e|ing|ation)"+r'\b', re.IGNORECASE)
+
+# Digital
+	keyword = re.compile("digital", re.IGNORECASE)
+
 
 	years = [2016,2017,2018,2019,2020,2021,2022,2023]
 	metaTable = {"Years": years}
@@ -141,9 +146,9 @@ if __name__ == "__main__":
 
 	# Convert dictionary to CSV
 	print(metaTable)
-	nextOutput = 'output-'+fldr+'.csv'
-	if os.path.isfile(nextOutput):
-		os.rename(nextOutput, 'output-'+fldr+'99.csv')
-	dict_to_csv(metaTable, nextOutput)
-	print('The converted CSV file is created successfully in the working directory ('+nextOutput+')')
+nextOutput = 'output-'+fldr+'.csv'
+if os.path.isfile(nextOutput):
+	os.rename(nextOutput, 'output-'+fldr+'99.csv')
+dict_to_csv(metaTable, nextOutput)
+print('The converted CSV file is created successfully in the working directory ('+nextOutput+')')
 

@@ -1,7 +1,10 @@
 
 #!/bin/bash
+# Usage:
+#  bash extract-text.sh > output/extracts.md
+# Loops through folders
 
-word="digitalization"
+word="digital"
 
 for folder in ./TA/*; do
   if [ -d "$folder" ]; then
